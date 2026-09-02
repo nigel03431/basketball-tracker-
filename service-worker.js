@@ -1,4 +1,4 @@
-const CACHE_NAME = "hooptrack-v1";
+const CACHE_NAME = "hooptrack-v2";
 
 const APP_FILES = [
     "./",
@@ -59,16 +59,35 @@ self.addEventListener("fetch", function(event) {
     }
 
     event.respondWith(
-        fetch(event.request)
-            .then(function(response) {
-                const responseCopy = response.clone();
-                caches.open(CACHE_NAME).then(function(cache) {
-                    cache.put(event.request, responseCopy);
+        caches.match(event.request).then(function(cachedResponse) {
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+
+            return fetch(event.request)
+                .then(function(response) {
+                    if (!response || response.status !== 200) {
+                        return response;
+                    }
+
+                    const responseCopy = response.clone();
+                    caches.open(CACHE_NAME).then(function(cache) {
+                        cache.put(event.request, responseCopy);
+                    });
+                    return response;
+                })
+                .catch(function() {
+                    if (event.request.mode === "navigate") {
+                        return caches.match("./index.html");
+                    }
+
+                    return new Response("Offline", {
+                        status: 503,
+                        headers: {
+                            "Content-Type": "text/plain"
+                        }
+                    });
                 });
-                return response;
-            })
-            .catch(function() {
-                return caches.match(event.request);
-            })
+        })
     );
 });
