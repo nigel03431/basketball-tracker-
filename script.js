@@ -4,7 +4,11 @@
 
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
-        navigator.serviceWorker.register("./service-worker.js");
+        navigator.serviceWorker
+            .register("./service-worker.js")
+            .catch(function(error) {
+                console.error("HoopTrack offline support failed:", error);
+            });
     });
 }
 
