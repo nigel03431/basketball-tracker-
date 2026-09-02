@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Games | HoopTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="app-navbar">
+
+        <a href="index.html" class="app-logo">
+            🏀 HoopTrack
+        </a>
+
+
+        <div class="app-nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="stats.html">
+                Stats
+            </a>
+
+            <a href="training.html">
+                Training
+            </a>
+
+            <a href="shooting.html">
+                Shooting
+            </a>
+
+            <a href="games.html">
+                Games
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+        <section class="tracker-page-section">
+
+
+            <h1>
+                Games
+            </h1>
+
+
+            <p>
+                Record your games and track your performance.
+            </p>
+
+
+
+            <!-- =========================
+                 RECORD GAME
+            ========================== -->
+
+            <div class="game-form">
+
+                <h2>
+                    Record a Game
+                </h2>
+
+
+
+                <div class="game-input-grid">
+
+
+                    <!-- OPPONENT -->
+
+                    <div>
+
+                        <label for="game-opponent">
+                            Opponent
+                        </label>
+
+                        <input
+                            type="text"
+                            id="game-opponent"
+                            placeholder="e.g. SMK Nan Hua"
+                        >
+
+                    </div>
+
+
+
+                    <!-- FORMAT -->
+
+                    <div>
+
+                        <label for="game-format">
+                            Format
+                        </label>
+
+                        <select
+                            id="game-format"
+                            name="game-format"
+                        >
+
+                            <option value="">
+                                Select format
+                            </option>
+
+                            <option value="1v1">
+                                1v1
+                            </option>
+
+                            <option value="2v2">
+                                2v2
+                            </option>
+
+                            <option value="3v3">
+                                3v3
+                            </option>
+
+                            <option value="4v4">
+                                4v4
+                            </option>
+
+                            <option value="5v5">
+                                5v5
+                            </option>
+
+                            <option value="6v6">
+                                6v6
+                            </option>
+
+                            <option value="7v7">
+                                7v7
+                            </option>
+
+                            <option value="8v8">
+                                8v8
+                            </option>
+
+                            <option value="9v9">
+                                9v9
+                            </option>
+
+                            <option value="10v10">
+                                10v10
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- DATE -->
+
+                    <div>
+
+                        <label for="game-date">
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="game-date"
+                        >
+
+                    </div>
+
+
+
+                    <!-- POINTS -->
+
+                    <div>
+
+                        <label for="game-points">
+                            Points
+                        </label>
+
+                        <input
+                            type="number"
+                            id="game-points"
+                            min="0"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+
+
+                    <!-- REBOUNDS -->
+
+                    <div>
+
+                        <label for="game-rebounds">
+                            Rebounds
+                        </label>
+
+                        <input
+                            type="number"
+                            id="game-rebounds"
+                            min="0"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+
+
+                    <!-- ASSISTS -->
+
+                    <div>
+
+                        <label for="game-assists">
+                            Assists
+                        </label>
+
+                        <input
+                            type="number"
+                            id="game-assists"
+                            min="0"
+                            placeholder="0"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================
+                     SHOOTING SECTION
+                ========================== -->
+
+                <div class="game-shooting-section">
+
+                    <h3>
+                        Shooting
+                    </h3>
+
+                    <p class="game-shooting-description">
+                        Enter makes and attempts for each shot type.
+                    </p>
+
+
+
+                    <!-- FREE THROWS -->
+
+                    <div class="game-shot-group">
+
+                        <h4>
+                            Free Throws
+                        </h4>
+
+
+                        <div class="game-shot-inputs">
+
+                            <div>
+
+                                <label for="game-ft-made">
+                                    Made
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="game-ft-made"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="game-ft-attempts">
+                                    Attempts
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="game-ft-attempts"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TWO POINTERS -->
+
+                    <div class="game-shot-group">
+
+                        <h4>
+                            2 Pointers
+                        </h4>
+
+
+                        <div class="game-shot-inputs">
+
+                            <div>
+
+                                <label for="game-two-made">
+                                    Made
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="game-two-made"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="game-two-attempts">
+                                    Attempts
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="game-two-attempts"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- THREE POINTERS -->
+
+                    <div class="game-shot-group">
+
+                        <h4>
+                            3 Pointers
+                        </h4>
+
+
+                        <div class="game-shot-inputs">
+
+                            <div>
+
+                                <label for="game-three-made">
+                                    Made
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="game-three-made"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="game-three-attempts">
+                                    Attempts
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="game-three-attempts"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================
+                     SAVE
+                ========================== -->
+
+                <button id="save-game-button">
+                    Save Game
+                </button>
+
+
+                <p id="game-save-message"></p>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 GAME HISTORY
+            ========================== -->
+
+            <div class="game-history-section">
+
+                <h2>
+                    Game History
+                </h2>
+
+
+                <div id="game-history">
+
+                    <p id="no-games-message">
+                        No games recorded yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

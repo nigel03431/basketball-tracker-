@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Settings | Basketball Tracker</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav class="app-navbar">
+		<a href="index.html" class="app-logo">HoopTrack</a>
+		<div class="app-nav-links">
+			<a href="dashboard.html">Dashboard</a>
+			<a href="stats.html">Stats</a>
+			<a href="training.html">Training</a>
+			<a href="shooting.html">Shooting</a>
+			<a href="games.html">Games</a>
+			<a href="settings.html">Settings</a>
+		</div>
+	</nav>  
+
+	<main class="settings-page">
+		<header class="settings-header">
+			<h1>Settings</h1>
+			<p>Manage your HoopTrack preferences and data.</p>
+		</header>
+
+		<section class="settings-group">
+			<h2>Training</h2>
+			<div class="setting-row">
+				<div><h3>Show Training Tips</h3><p>Show the Training Tip and Shooting Tip sections.</p></div>
+				<label class="setting-toggle"><input type="checkbox" id="show-training-tips"><span>On</span></label>
+			</div>
+			<div class="setting-row">
+				<div><h3>Reset Today's Training</h3><p>Clear the completion status for today's exercises.</p></div>
+				<button type="button" class="settings-button" id="reset-training-button">Reset Training</button>
+			</div>
+		</section>
+
+		<section class="settings-group">
+			<h2>Game Tracking</h2>
+			<div class="setting-row">
+				<div><h3>Confirm Before Deleting Games</h3><p>Ask before a game is permanently deleted.</p></div>
+				<label class="setting-toggle"><input type="checkbox" id="confirm-delete-games"><span>On</span></label>
+			</div>
+		</section>
+
+		<section class="settings-group">
+			<h2>Data Management</h2>
+			<div class="settings-actions">
+				<button type="button" class="settings-button" id="export-data-button">Export Data</button>
+				<button type="button" class="settings-button" id="import-data-button">Import Data</button>
+				<input type="file" id="import-data-input" accept="application/json" hidden>
+				<button type="button" class="settings-button settings-danger" id="reset-all-data-button">Reset All Data</button>
+			</div>
+			<p id="settings-status" class="settings-status" role="status"></p>
+		</section>
+
+		<section class="settings-group settings-about">
+			<h2>About</h2>
+			<p><strong>HoopTrack</strong></p>
+			<p>Version 1.0</p>
+			<p>Built by Nigel</p>
+		</section>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>

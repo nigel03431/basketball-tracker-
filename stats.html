@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Stats | Basketball Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         APP NAVBAR
+    ========================== -->
+
+    <nav class="app-navbar">
+
+        <div class="app-logo">
+            🏀 Basketball Tracker
+        </div>
+
+        <div class="app-nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="stats.html">
+                Stats
+            </a>
+
+            <a href="training.html">
+                Training
+            </a>
+
+            <a href="shooting.html">
+                Shooting
+            </a>
+
+            <a href="games.html">
+                Games
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         STATS PAGE
+    ========================== -->
+
+    <main>
+
+        <section class="tracker-page-section">
+
+            <h1>
+                My Stats
+            </h1>
+
+            <p>
+                Track your overall basketball performance.
+            </p>
+
+
+            <!-- =========================
+                 STAT CARDS
+            ========================== -->
+
+            <div class="stats">
+
+
+                <!-- POINTS -->
+
+                <div class="stat-card">
+
+                    <h3>
+                        Points
+                    </h3>
+
+                    <p
+                        class="stat-number"
+                        id="points-stat"
+                    >
+                        0
+                    </p>
+
+                    <input
+                        type="number"
+                        id="points-input"
+                        min="0"
+                        placeholder="Enter points"
+                    >
+
+                </div>
+
+
+                <!-- FREE THROWS -->
+
+                <div class="stat-card">
+
+                    <h3>
+                        Free Throws
+                    </h3>
+
+                    <p
+                        class="stat-number"
+                        id="free-throws-stat"
+                    >
+                        0 / 0
+                    </p>
+
+                    <p id="free-throws-percentage">
+                        0.0%
+                    </p>
+
+                    <input
+                        type="number"
+                        id="free-throws-made-input"
+                        min="0"
+                        placeholder="Made"
+                    >
+
+                    <input
+                        type="number"
+                        id="free-throws-attempts-input"
+                        min="0"
+                        placeholder="Attempts"
+                    >
+
+                </div>
+
+
+                <!-- THREE POINTERS -->
+
+                <div class="stat-card">
+
+                    <h3>
+                        Three Pointers
+                    </h3>
+
+                    <p
+                        class="stat-number"
+                        id="three-pointers-stat"
+                    >
+                        0 / 0
+                    </p>
+
+                    <p id="three-pointers-percentage">
+                        0.0%
+                    </p>
+
+                    <input
+                        type="number"
+                        id="three-pointers-made-input"
+                        min="0"
+                        placeholder="Made"
+                    >
+
+                    <input
+                        type="number"
+                        id="three-pointers-attempts-input"
+                        min="0"
+                        placeholder="Attempts"
+                    >
+
+                </div>
+
+
+                <!-- REBOUNDS -->
+
+                <div class="stat-card">
+
+                    <h3>
+                        Rebounds
+                    </h3>
+
+                    <p
+                        class="stat-number"
+                        id="rebounds-stat"
+                    >
+                        0
+                    </p>
+
+                    <input
+                        type="number"
+                        id="rebounds-input"
+                        min="0"
+                        placeholder="Enter rebounds"
+                    >
+
+                </div>
+
+
+                <!-- ASSISTS -->
+
+                <div class="stat-card">
+
+                    <h3>
+                        Assists
+                    </h3>
+
+                    <p
+                        class="stat-number"
+                        id="assists-stat"
+                    >
+                        0
+                    </p>
+
+                    <input
+                        type="number"
+                        id="assists-input"
+                        min="0"
+                        placeholder="Enter assists"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 SAVE STATS
+            ========================== -->
+
+            <button id="save-stats-button">
+                Save Stats
+            </button>
+
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

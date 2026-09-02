@@ -1,0 +1,2579 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-width: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 30px;
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+input,
+button {
+    box-sizing: border-box;
+}
+
+header {
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0 0 10px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+h3 {
+    margin: 0 0 10px;
+}
+
+p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   MY STATS
+========================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 22px;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.stat-card {
+    background-color: white;
+
+    padding: 26px 16px;
+
+    min-width: 0;
+    min-height: 240px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    overflow: hidden;
+}
+
+.stat-card h3 {
+    font-size: 19px;
+    line-height: 1.35;
+    min-height: 26px;
+    margin-bottom: 14px;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 8px 0 12px;
+}
+
+.stat-card p:not(.stat-number) {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 4px 0 10px;
+}
+
+.stat-card input {
+    width: 90%;
+    max-width: 150px;
+
+    padding: 10px;
+    margin: 4px 0;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+/* =========================
+   SAVE STATS
+========================= */
+
+#save-stats-button {
+    display: block;
+
+    background-color: black;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 10px 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin: 20px auto 0;
+
+    min-height: 42px;
+}
+
+#save-stats-button:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   TRAINING
+========================= */
+
+.training {
+    background-color: white;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.add-training {
+    display: flex;
+    gap: 10px;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.add-training input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 11px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.add-training button {
+    background-color: black;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 10px 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.add-training button:hover {
+    opacity: 0.8;
+}
+
+
+/* Progress */
+
+#progress {
+    margin-bottom: 15px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 15px;
+
+    background-color: #ddd;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+}
+
+#progress-bar,
+#dashboard-progress-bar {
+    width: 0%;
+    height: 100%;
+
+    background-color: black;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+
+/* Training exercises */
+
+.training > label,
+#custom-training label {
+    display: flex;
+
+    align-items: center;
+
+    text-align: left;
+
+    width: 100%;
+
+    padding: 8px 0;
+
+    font-size: 16px;
+
+    gap: 8px;
+}
+
+.training input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+#custom-training {
+    margin-top: 8px;
+}
+
+#custom-training label {
+    background-color: #f5f5f5;
+
+    border-radius: 6px;
+
+    padding: 8px;
+
+    margin-bottom: 8px;
+}
+
+#custom-training button {
+    margin-left: auto;
+
+    background-color: #333;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 5px 8px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   SHOOTING STATS
+========================= */
+
+.shooting {
+    background-color: white;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.shooting-input {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.shooting-input label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.shooting-input input {
+    width: 80px;
+
+    padding: 9px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#calculate-button {
+    background-color: black;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 10px 14px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#calculate-button:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   GAME HISTORY
+========================= */
+
+.game-history {
+    background-color: white;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.game-form {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.game-form input {
+    width: 100%;
+    min-width: 0;
+
+    padding: 10px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.game-form button {
+    grid-column: 1 / -1;
+
+    background-color: black;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#game-history-list {
+    margin-top: 25px;
+}
+
+.game-card {
+    background-color: #f7f7f7;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    margin-top: 15px;
+
+    text-align: left;
+
+    overflow-wrap: anywhere;
+}
+
+.game-card button {
+    background-color: #333;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 5px 8px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   GAME AVERAGES
+========================= */
+
+.game-averages {
+    background-color: white;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.average-stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.average-card {
+    background-color: #f7f7f7;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    min-width: 0;
+}
+
+.average-card h3 {
+    font-size: 15px;
+}
+
+.average-card p {
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (min-width: 601px) and (max-width: 899px) {
+
+    body {
+        padding: 25px 20px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* Header */
+
+    header {
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       MOBILE MY STATS
+    ========================= */
+
+    .stats {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 14px;
+
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .stat-card {
+        width: 100%;
+        min-width: 0;
+
+        min-height: 205px;
+
+        padding: 18px 10px;
+    }
+
+    .stat-card h3 {
+        font-size: 16px;
+        line-height: 1.3;
+        min-height: 21px;
+        margin-bottom: 10px;
+
+        text-align: center;
+
+        overflow-wrap: anywhere;
+    }
+
+    .stat-number {
+        font-size: 27px;
+    }
+
+    .stat-card input {
+        width: 95%;
+
+        font-size: 16px;
+
+        padding: 9px;
+    }
+
+
+    /* Save button */
+
+    #save-stats-button {
+        font-size: 14px;
+
+        padding: 9px 16px;
+    }
+
+
+    /* =========================
+       MOBILE TRAINING
+    ========================= */
+
+    .training {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 35px auto;
+
+        padding: 20px 15px;
+    }
+
+    .add-training {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .add-training input,
+    .add-training button {
+        width: 100%;
+
+        font-size: 16px;
+
+        min-height: 44px;
+    }
+
+    .training > label,
+    #custom-training label {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       MOBILE SHOOTING
+    ========================= */
+
+    .shooting {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 35px auto;
+
+        padding: 20px 15px;
+    }
+
+    .shooting-input {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 10px;
+    }
+
+    .shooting-input label {
+        width: 100%;
+
+        justify-content: space-between;
+
+        font-size: 15px;
+    }
+
+    .shooting-input input {
+        font-size: 16px;
+    }
+
+    #calculate-button {
+        width: 100%;
+
+        font-size: 16px;
+
+        min-height: 44px;
+    }
+
+
+    /* =========================
+       MOBILE GAME HISTORY
+    ========================= */
+
+    .game-history {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 35px auto;
+
+        padding: 20px 15px;
+    }
+
+    .game-form {
+        grid-template-columns: 1fr;
+    }
+
+    .game-form input {
+        font-size: 16px;
+
+        min-height: 44px;
+    }
+
+    .game-form button {
+        grid-column: auto;
+
+        font-size: 16px;
+
+        min-height: 44px;
+    }
+
+
+    /* =========================
+       MOBILE AVERAGES
+    ========================= */
+
+    .game-averages {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 35px auto;
+
+        padding: 20px 15px;
+    }
+
+    .average-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* Prevent iPhone input zoom */
+
+    input,
+    button,
+    textarea,
+    select {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media screen and (max-width: 400px) {
+
+    .stats {
+        grid-template-columns: 1fr !important;
+    }
+
+    .stat-card {
+        min-height: 170px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+}
+
+/* =====================================================
+   HOME PAGE
+===================================================== */
+
+.home-page {
+    background: #111;
+    color: white;
+    padding: 0;
+    text-align: left;
+}
+
+
+/* =========================
+   HOME NAVBAR
+========================= */
+
+.home-navbar {
+    width: 100%;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 5%;
+
+    border-bottom: 1px solid #2a2a2a;
+}
+
+
+.home-logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.nav-open-button {
+    display: inline-block;
+
+    background: white;
+    color: black;
+
+    text-decoration: none;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.nav-open-button:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px;
+}
+
+
+.hero-content {
+    width: 100%;
+    max-width: 900px;
+
+    text-align: center;
+}
+
+
+.hero-badge {
+    display: inline-block;
+
+    border: 1px solid #444;
+
+    border-radius: 30px;
+
+    padding: 8px 14px;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+
+    color: #ccc;
+}
+
+
+.hero-content h1 {
+    font-size: clamp(42px, 8vw, 78px);
+
+    line-height: 1.05;
+
+    margin: 0 auto 25px;
+
+    letter-spacing: -2px;
+}
+
+
+.hero-content h1 span {
+    color: #aaa;
+}
+
+
+.hero-content > p {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    background: #ffffff;
+    color: #111111;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.primary-button {
+    background: white;
+
+    color: black;
+}
+
+
+.secondary-button {
+    background: white;
+
+    color: black;
+}
+
+
+.primary-button:hover,
+.secondary-button:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-section {
+    background: #f2f2f2;
+
+    color: #111;
+
+    padding: 90px 5%;
+}
+
+
+.section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.section-label {
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #777;
+}
+
+
+.section-heading h2 {
+    font-size: clamp(28px, 5vw, 45px);
+
+    margin: 10px 0;
+
+    letter-spacing: -1px;
+}
+
+
+.section-heading > p:last-child {
+    color: #666;
+}
+
+
+.home-feature-grid {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.home-feature-card {
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    min-height: 220px;
+
+    box-shadow:
+        0 3px 12px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.feature-icon {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+.home-feature-card h3 {
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+
+.home-feature-card p {
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-section {
+    background: #111;
+
+    color: white;
+
+    padding: 100px 5%;
+}
+
+
+.steps {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.step {
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+.step-number {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #777;
+
+    margin-bottom: 15px;
+}
+
+
+.step h3 {
+    font-size: 22px;
+}
+
+
+.step p {
+    color: #999;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.cta-section {
+    background: white;
+
+    color: #111;
+
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+
+.cta-section h2 {
+    font-size: clamp(30px, 5vw, 50px);
+
+    margin-bottom: 15px;
+}
+
+
+.cta-section p {
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111;
+
+    color: #777;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+
+footer p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 700px;
+}
+
+
+footer p strong {
+    font-size: 1.15em;
+}
+
+
+.mini-footer {
+    background: #fff;
+    color: #111;
+    border-radius: 12px;
+    padding: 12px 18px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   ACTUAL TRACKER APP
+===================================================== */
+
+.app-navbar {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    min-height: 65px;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 12px 30px;
+
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+.app-logo {
+    font-weight: bold;
+
+    font-size: 22px;
+
+    white-space: nowrap;
+
+    color: white;
+
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.app-logo:hover {
+    color: white;
+    text-decoration: none;
+}
+
+
+.app-nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    overflow-x: auto;
+}
+
+
+.app-nav-links a {
+    color: #ccc;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    padding: 9px 12px;
+
+    border-radius: 5px;
+
+    white-space: nowrap;
+}
+
+
+.app-nav-links a:hover {
+    background: #292929;
+
+    color: white;
+}
+
+
+/* Tracker page sections */
+
+.tracker-page-section {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 60px 25px;
+
+    scroll-margin-top: 80px;
+}
+
+
+/* Dashboard */
+
+.dashboard-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+.dashboard-card {
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.dashboard-card h3 {
+    color: #111111;
+    font-size: 13px;
+}
+
+
+.dashboard-card p {
+    color: #111111;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+
+.dashboard-section {
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   MOBILE HOME
+========================= */
+
+@media (max-width: 600px) {
+
+    .home-navbar {
+        padding: 12px 18px;
+    }
+
+
+    .home-logo {
+        font-size: 15px;
+    }
+
+
+    .nav-open-button {
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .hero-section {
+        min-height: 580px;
+
+        padding: 60px 20px;
+    }
+
+
+    .hero-content h1 {
+        letter-spacing: -1px;
+    }
+
+
+    .hero-content > p {
+        font-size: 15px;
+    }
+
+
+    .home-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+
+    .app-navbar {
+        position: relative;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 15px;
+    }
+
+
+    .app-logo {
+        text-align: center;
+    }
+
+
+    .app-nav-links {
+        justify-content: flex-start;
+
+        width: 100%;
+    }
+
+
+    .tracker-page-section {
+        padding:
+            40px
+            15px;
+    }
+
+
+    .dashboard-cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+
+    .hero-buttons a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+/* =====================================================
+   SETTINGS
+===================================================== */
+
+.settings-page {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 55px 25px;
+    text-align: left;
+}
+
+.settings-header {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.settings-header p,
+.setting-row p,
+.settings-about p {
+    color: #555;
+}
+
+.settings-group {
+    margin-bottom: 22px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+}
+
+.settings-group h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #111;
+    padding-bottom: 10px;
+}
+
+.setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.setting-row:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.setting-row h3 {
+    margin-bottom: 5px;
+}
+
+.setting-row p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.setting-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.setting-toggle input {
+    width: 20px;
+    height: 20px;
+    accent-color: #111;
+}
+
+.settings-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.settings-button {
+    padding: 11px 16px;
+    background: #111;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.settings-button:hover {
+    background: #333;
+}
+
+.settings-danger {
+    background: #9b1c1c;
+}
+
+.settings-danger:hover {
+    background: #741414;
+}
+
+.settings-status {
+    min-height: 22px;
+    margin-bottom: 0;
+    color: #245c32;
+    font-weight: bold;
+}
+
+.training-tips {
+    margin: 18px 0;
+    padding: 14px 18px;
+    background: #f1f1f1;
+    border-left: 4px solid #111;
+    text-align: left;
+}
+
+.training-tips p {
+    margin: 5px 0 0;
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .setting-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .settings-page {
+        padding: 40px 15px;
+    }
+}
+
+/* =====================================================
+   SHOOTING CALCULATOR
+===================================================== */
+
+.shooting-calculator {
+    max-width: 700px;
+    margin: 30px auto 0;
+    padding: 35px;
+}
+
+.shooting-input-group {
+    margin-bottom: 25px;
+}
+
+.shooting-input-group label {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.shooting-input-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    font-size: 18px;
+}
+
+#calculate-button {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+#shooting-result {
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* =====================================================
+   SHOOTING SESSION
+===================================================== */
+
+.shooting-session {
+    max-width: 750px;
+    margin: 30px auto 0;
+}
+
+.shooting-category {
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.shooting-category h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.shooting-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.shooting-inputs label {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.shooting-inputs input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 18px;
+}
+
+#save-shooting-button {
+    width: 100%;
+    padding: 17px 20px;
+    margin-top: 10px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+#shooting-save-message {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.shooting-history-card {
+    padding: 25px;
+    margin-top: 18px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.shooting-history-card h3 {
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.shooting-history-card p {
+    margin: 12px 0;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.shooting-history-card strong {
+    font-weight: 700;
+}
+
+.delete-shooting-button {
+    display: block;
+
+    margin: 20px auto 0;
+
+    padding: 8px 14px;
+
+    background: #111111;
+    color: #ffffff;
+
+    border: none;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.delete-shooting-button:hover {
+    background: #333333;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .shooting-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .shooting-category {
+        padding: 20px;
+    }
+
+}
+
+/* =====================================================
+   GAMES
+===================================================== */
+
+.game-form {
+    width: min(100%, 760px);
+    margin: 30px auto 0;
+
+    padding: 30px;
+
+    background: #ffffff;
+    color: #111111;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-form h2 {
+    margin: 0 0 18px;
+
+    font-size: 26px;
+    text-align: center;
+}
+
+.game-input-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px 20px;
+
+    width: min(100%, 660px);
+    margin: 12px auto 0;
+    align-items: end;
+    justify-items: center;
+    text-align: center;
+}
+
+.game-input-grid > div {
+    width: 100%;
+    max-width: 200px;
+}
+
+.game-input-grid label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+    text-align: center;
+}
+
+.game-input-grid input,
+.game-input-grid select {
+    display: block;
+    width: 100%;
+
+    padding: 14px;
+
+    background: #ffffff;
+    color: #111111;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.game-input-grid select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.game-shot-group {
+    width: min(100%, 660px);
+    margin: 22px auto 0;
+    text-align: left;
+}
+
+.game-shot-group h4 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.game-shot-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.game-shot-inputs > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-shot-inputs label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.game-shot-inputs input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#save-game-button {
+    width: min(100%, 660px);
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #111111;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#save-game-button:hover {
+    opacity: 0.8;
+}
+
+#game-save-message {
+    margin: 15px 0 0;
+
+    text-align: center;
+
+    color: #111111;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   GAME HISTORY
+===================================================== */
+
+.game-history-section {
+    margin-top: 45px;
+    text-align: left;
+}
+
+.game-history-section h2 {
+    margin: 0 0 18px;
+
+    font-size: 28px;
+    text-align: left;
+}
+
+.game-history-card {
+    margin-top: 18px;
+
+    padding: 25px;
+
+    background: #ffffff;
+    color: #111111;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.game-history-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.game-history-header h3 {
+    margin: 0;
+
+    font-size: 22px;
+}
+
+.game-history-header p {
+    margin: 4px 0 0;
+
+    color: #555555;
+}
+
+.game-history-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.game-history-stats div {
+    padding: 15px;
+
+    background: #f7f7f7;
+    color: #111111;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 9px;
+
+    text-align: center;
+}
+
+.game-history-stats strong {
+    display: block;
+
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+.game-history-stats span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #666666;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.delete-game-button {
+    display: block;
+
+    margin: 22px auto 0;
+
+    padding: 8px 15px;
+
+    background: #111111;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.delete-game-button:hover {
+    opacity: 0.8;
+}
+
+#no-games-message {
+    padding: 25px;
+
+    background: #ffffff;
+
+    color: #666666;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   GAMES MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .game-form {
+        padding: 22px;
+    }
+
+    .game-input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-history-card {
+        padding: 20px;
+    }
+
+    .game-history-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =====================================================
+   DASHBOARD PERFORMANCE
+===================================================== */
+
+.dashboard-cards {
+    margin-bottom: 35px;
+}
+
+.dashboard-card {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.dashboard-card::after {
+    content: "";
+
+    position: absolute;
+
+    right: -30px;
+    bottom: -30px;
+
+    width: 100px;
+    height: 100px;
+
+    background: #111111;
+
+    border-radius: 50%;
+
+    opacity: 0.05;
+}
+
+.dashboard-card > p {
+    font-size: 42px;
+}
+
+
+/* =====================================================
+   DASHBOARD RECENT GAMES
+===================================================== */
+
+#dashboard-recent-games {
+    margin-top: 20px;
+}
+
+#dashboard-recent-games > p {
+    padding: 20px;
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-game-card {
+    transition: 0.2s ease;
+}
+
+.dashboard-game-card:hover {
+    transform: translateY(-3px);
+}
+
+/* =====================================================
+   PERFORMANCE ANALYTICS
+===================================================== */
+
+.analytics-card {
+    margin-top: 20px;
+    padding: 24px;
+    background: #ffffff;
+    color: #111111;
+    border: 2px solid #111111;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.analytics-card h3 {
+    margin-bottom: 8px;
+    color: #111111;
+}
+
+.analytics-description {
+    margin-bottom: 20px;
+    color: #555555;
+}
+
+
+/* =========================
+   SCORING TREND
+========================= */
+
+.scoring-trend {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.scoring-trend-card {
+    min-width: 90px;
+    padding: 16px 12px;
+    background: #ffffff;
+    color: #111111;
+    border: 2px solid #111111;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.scoring-trend-card strong {
+    display: block;
+    font-size: 24px;
+}
+
+.scoring-trend-card span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   BEST PERFORMANCE GRID
+========================= */
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+.analytics-grid .analytics-card {
+    margin-top: 20px;
+}
+
+
+.analytics-value {
+    margin-top: 12px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+.analytics-subtext {
+    margin-top: 6px;
+    color: #555555;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-card {
+        padding: 20px;
+    }
+
+    .scoring-trend-card {
+        min-width: 80px;
+    }
+
+}
+
+/* =====================================================
+   PERFORMANCE ANALYTICS
+===================================================== */
+
+.analytics-section {
+    background: #ffffff;
+    color: #111111;
+    border: 1px solid #dddddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.analytics-section h2 {
+    margin-bottom: 8px;
+    color: #111111;
+}
+
+.analytics-intro {
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   ANALYTICS CARD
+========================= */
+
+.analytics-card {
+    margin-top: 20px;
+
+    padding: 24px;
+
+    background: #ffffff;
+    color: #111111;
+    border: 2px solid #111111;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+.analytics-card h3 {
+    margin-bottom: 8px;
+    color: #111111;
+}
+
+
+.analytics-description {
+    color: #555555;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SCORING TREND
+========================= */
+
+.scoring-trend {
+
+    display: flex;
+
+    gap: 12px;
+
+    overflow-x: auto;
+
+    padding: 5px 2px 10px;
+
+}
+
+
+.scoring-trend-card {
+
+    min-width: 90px;
+
+    padding: 16px 12px;
+
+    background: #ffffff;
+
+    color: #111111;
+    border: 2px solid #111111;
+    border-radius: 10px;
+
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+
+}
+
+
+.scoring-trend-card strong {
+
+    display: block;
+
+    font-size: 26px;
+
+}
+
+
+.scoring-trend-card span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #555555;
+
+}
+
+
+/* =========================
+   BEST PERFORMANCE GRID
+========================= */
+
+.analytics-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.analytics-grid
+.analytics-card {
+
+    margin-top: 20px;
+
+}
+
+
+/* =========================
+   ANALYTICS VALUES
+========================= */
+
+.analytics-value {
+
+    margin-top: 14px;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+.analytics-subtext {
+
+    margin-top: 6px;
+
+    color: #555555;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .analytics-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .analytics-card {
+
+        padding: 20px;
+
+    }
+
+
+    .scoring-trend-card {
+
+        min-width: 80px;
+
+    }
+
+}
+
+/* =====================================================
+   PHONE LAYOUT
+===================================================== */
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .app-navbar {
+        display: block;
+        padding: 14px 12px 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    }
+
+    .app-logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 12px;
+        font-size: 22px;
+    }
+
+    .app-nav-links {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .app-nav-links a {
+        min-height: 42px;
+        padding: 10px 4px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .tracker-page-section {
+        width: 100%;
+        padding: 34px 16px 48px;
+    }
+
+    .tracker-page-section > h1 {
+        font-size: 32px;
+    }
+
+    .tracker-page-section > p {
+        line-height: 1.5;
+    }
+
+    .dashboard-cards,
+    .stats {
+        gap: 14px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 24px;
+    }
+
+    .dashboard-card {
+        min-height: 132px;
+        padding: 18px 10px;
+    }
+
+    .dashboard-card > p {
+        font-size: 34px;
+    }
+
+    .dashboard-section,
+    .analytics-section,
+    .game-form,
+    .game-history,
+    .game-averages,
+    .shooting-calculator {
+        padding: 20px 16px;
+        border-radius: 10px;
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .analytics-card {
+        padding: 20px 16px;
+    }
+
+    .scoring-trend {
+        gap: 8px;
+    }
+
+    .scoring-trend-card {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 14px 8px;
+    }
+
+    .game-input-grid,
+    .game-form .game-input-grid,
+    .shooting-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .game-form,
+    .shooting-session,
+    .shooting-calculator,
+    .game-history,
+    .game-averages {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .game-history-stats,
+    .average-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .settings-page {
+        padding: 34px 16px 48px;
+    }
+
+    .settings-group {
+        padding: 20px 16px;
+    }
+
+    .settings-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .settings-button {
+        min-height: 44px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .app-nav-links a {
+        font-size: 13px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}

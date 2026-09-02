@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Shooting | Basketball Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         APP NAVBAR
+    ========================== -->
+
+    <nav class="app-navbar">
+
+        <a href="index.html" class="app-logo">
+            🏀 HoopTrack
+        </a>
+
+        <div class="app-nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="stats.html">
+                Stats
+            </a>
+
+            <a href="training.html">
+                Training
+            </a>
+
+            <a href="shooting.html">
+                Shooting
+            </a>
+
+            <a href="games.html">
+                Games
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         SHOOTING PAGE
+    ========================== -->
+
+    <main>
+
+        <section class="tracker-page-section">
+
+            <h1>
+                Shooting
+            </h1>
+
+            <p>
+                Track your shooting accuracy and improve your consistency.
+            </p>
+
+
+            <!-- =========================
+                 SHOOTING SESSION
+            ========================== -->
+
+            <section class="dashboard-section">
+
+                <h2>
+                    Shooting Session
+                </h2>
+
+                <p>
+                    Record your shots from different areas.
+                </p>
+
+
+                <div class="shooting-session">
+
+
+                    <!-- FREE THROWS -->
+
+                    <div class="shooting-category">
+
+                        <h3>
+                            Free Throws
+                        </h3>
+
+                        <div class="shooting-inputs">
+
+                            <div>
+
+                                <label for="ft-shooting-made">
+                                    Made
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="ft-shooting-made"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="ft-shooting-attempts">
+                                    Attempts
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="ft-shooting-attempts"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MID RANGE -->
+
+                    <div class="shooting-category">
+
+                        <h3>
+                            Mid-Range
+                        </h3>
+
+                        <div class="shooting-inputs">
+
+                            <div>
+
+                                <label for="mid-shooting-made">
+                                    Made
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="mid-shooting-made"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="mid-shooting-attempts">
+                                    Attempts
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="mid-shooting-attempts"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- THREE POINTERS -->
+
+                    <div class="shooting-category">
+
+                        <h3>
+                            Three Pointers
+                        </h3>
+
+                        <div class="shooting-inputs">
+
+                            <div>
+
+                                <label for="three-shooting-made">
+                                    Made
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="three-shooting-made"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+
+                            <div>
+
+                                <label for="three-shooting-attempts">
+                                    Attempts
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="three-shooting-attempts"
+                                    min="0"
+                                    placeholder="0"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <button id="save-shooting-button">
+                        Save Session
+                    </button>
+
+
+                    <p id="shooting-save-message"></p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SHOOTING HISTORY
+            ========================== -->
+
+            <section class="dashboard-section">
+
+                <h2>
+                    Shooting History
+                </h2>
+
+                <div id="shooting-history">
+
+                    <p>
+                        No shooting sessions recorded yet.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SHOOTING GOALS
+            ========================== -->
+
+            <section class="dashboard-section">
+
+                <h2>
+                    Shooting Goals
+                </h2>
+
+                <p>
+                    Consistency matters more than one perfect session.
+                </p>
+
+
+                <div class="dashboard-cards">
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Free Throw
+                        </h3>
+
+                        <p>
+                            Aim for 80%+
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Mid-Range
+                        </h3>
+
+                        <p>
+                            Aim for 60%+
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Three Pointer
+                        </h3>
+
+                        <p>
+                            Aim for 40%+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 SHOOTING TIP
+            ========================== -->
+
+            <section id="shooting-tip" class="dashboard-section">
+
+                <h2>
+                    Shooting Tip
+                </h2>
+
+                <p>
+                    Don't rush your shot. Focus on balance,
+                    consistent mechanics, and finishing your follow-through.
+                </p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

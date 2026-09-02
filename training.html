@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Training | Basketball Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         APP NAVBAR
+    ========================== -->
+
+    <nav class="app-navbar">
+
+        <a href="index.html" class="app-logo">
+            🏀 HoopTrack
+        </a>
+
+        <div class="app-nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="stats.html">
+                Stats
+            </a>
+
+            <a href="training.html">
+                Training
+            </a>
+
+            <a href="shooting.html">
+                Shooting
+            </a>
+
+            <a href="games.html">
+                Games
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         TRAINING PAGE
+    ========================== -->
+
+    <main>
+
+        <section class="tracker-page-section">
+
+            <h1>
+                Training
+            </h1>
+
+            <p>
+                Complete your training and track your daily work.
+            </p>
+
+
+            <!-- =========================
+                 TODAY'S TRAINING
+            ========================== -->
+
+            <section class="dashboard-section">
+
+                <h2>
+                    Today's Training
+                </h2>
+
+                <p>
+                    Complete your exercises to improve your game.
+                </p>
+
+                <!-- PROGRESS -->
+
+                <div class="training-progress">
+
+                    <p id="progress">
+                        0 / 4 completed
+                    </p>
+
+                    <div class="progress-container">
+
+                        <div
+                            id="progress-bar"
+                            style="width: 0%;"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ORIGINAL EXERCISES -->
+
+                <div class="training">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="task1"
+                        >
+                        Ball Handling
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="task2"
+                        >
+                        Shooting
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="task3"
+                        >
+                        Finishing
+                    </label>
+
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="task4"
+                        >
+                        Free Throws
+                    </label>
+
+                </div>
+
+
+                <!-- =========================
+                     CUSTOM EXERCISES
+                ========================== -->
+
+                <h3>
+                    Custom Exercises
+                </h3>
+
+                <div class="add-training">
+
+                    <input
+                        type="text"
+                        id="training-input"
+                        placeholder="Add your own exercise..."
+                    >
+
+                    <button id="add-button">
+                        Add
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="custom-training"
+                    class="training"
+                ></div>
+
+            </section>
+
+
+            <!-- =========================
+                 TRAINING TIP
+            ========================== -->
+
+            <section id="training-tip" class="dashboard-section">
+
+                <h2>
+                    Training Tip
+                </h2>
+
+                <p>
+                    Consistency beats intensity. 
+                    Focus on doing quality work regularly.
+                </p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

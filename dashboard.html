@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | Basketball Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         APP NAVBAR
+    ========================== -->
+
+    <nav class="app-navbar">
+
+        <a href="index.html" class="app-logo">
+            🏀 HoopTrack
+        </a>
+
+        <div class="app-nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="stats.html">
+                Stats
+            </a>
+
+            <a href="training.html">
+                Training
+            </a>
+
+            <a href="shooting.html">
+                Shooting
+            </a>
+
+            <a href="games.html">
+                Games
+            </a>
+
+            <a href="settings.html">
+                Settings
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <main>
+
+        <section class="tracker-page-section">
+
+            <h1>
+                Your Dashboard
+            </h1>
+
+            <p>
+                Your basketball performance at a glance.
+            </p>
+
+
+            <!-- =========================
+                 PERFORMANCE CARDS
+            ========================== -->
+
+            <div class="dashboard-cards">
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        Games
+                    </h3>
+
+                    <p id="dashboard-games">
+                        0
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        PPG
+                    </h3>
+
+                    <p id="dashboard-ppg">
+                        0.0
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        RPG
+                    </h3>
+
+                    <p id="dashboard-rpg">
+                        0.0
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        APG
+                    </h3>
+
+                    <p id="dashboard-apg">
+                        0.0
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        FT%
+                    </h3>
+
+                    <p id="dashboard-ft">
+                        0.0%
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        3PT%
+                    </h3>
+
+                    <p id="dashboard-3pt">
+                        0.0%
+                    </p>
+
+                </div>
+
+            </div>
+
+<section class="dashboard-section analytics-section">
+
+    <h2>Performance Overview</h2>
+
+    <p class="analytics-intro">
+        See your best performances and how your scoring is trending.
+    </p>
+
+
+    <!-- SCORING TREND -->
+    <div class="analytics-card">
+
+        <h3>Scoring Trend</h3>
+
+        <p class="analytics-description">
+            Your points from your most recent games.
+        </p>
+
+        <div
+            id="scoring-trend"
+            class="scoring-trend"
+        >
+
+            <p>No game data yet.</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- BEST PERFORMANCES -->
+    <div class="analytics-grid">
+
+
+        <!-- BEST SCORING -->
+        <div class="analytics-card">
+
+            <h3>🏆 Best Scoring Game</h3>
+
+            <div id="best-scoring-game">
+
+                <p>No game data yet.</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BEST 3PT -->
+        <div class="analytics-card">
+
+            <h3>🎯 Best 3PT Game</h3>
+
+            <div id="best-three-game">
+
+                <p>No 3PT data yet.</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BEST 2PT -->
+        <div class="analytics-card">
+
+            <h3>🏀 Best 2PT Game</h3>
+
+            <div id="best-two-game">
+
+                <p>No 2PT data yet.</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BEST FT -->
+        <div class="analytics-card">
+
+            <h3>🏀 Best FT Game</h3>
+
+            <div id="best-ft-game">
+
+                <p>No FT data yet.</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BEST REBOUNDING -->
+        <div class="analytics-card">
+
+            <h3>💪 Best Rebounding Game</h3>
+
+            <div id="best-rebound-game">
+
+                <p>No game data yet.</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BEST ASSISTS -->
+        <div class="analytics-card">
+
+            <h3>🤝 Best Assist Game</h3>
+
+            <div id="best-assist-game">
+
+                <p>No game data yet.</p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+            <!-- =========================
+                 QUICK ACTIONS
+            ========================== -->
+
+            <section class="dashboard-section">
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+                <p>
+                    Jump straight into what you want to do.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="training.html"
+                        class="primary-button"
+                    >
+                        🏋️ Training
+                    </a>
+
+                    <a
+                        href="games.html"
+                        class="primary-button"
+                    >
+                        🏀 Add Game
+                    </a>
+
+                    <a
+                        href="shooting.html"
+                        class="secondary-button"
+                    >
+                        🎯 Shooting
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 RECENT GAMES
+            ========================== -->
+
+            <section class="dashboard-section">
+
+                <h2>
+                    Recent Games
+                </h2>
+
+                <div id="dashboard-recent-games">
+
+                    <p>
+                        No games recorded yet.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 TRAINING PROGRESS
+            ========================== -->
+
+            <section class="dashboard-section">
+
+                <h2>
+                    Training Progress
+                </h2>
+
+                <p id="dashboard-training-progress">
+                    0 / 0 completed
+                </p>
+
+                <div class="progress-container">
+
+                    <div
+                        id="dashboard-progress-bar"
+                        style="width: 0%;"
+                    ></div>
+
+                </div>
+
+                <a
+                    href="training.html"
+                    class="primary-button"
+                >
+                    View Training
+                </a>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
