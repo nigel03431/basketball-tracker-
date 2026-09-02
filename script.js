@@ -2,6 +2,12 @@
    HOOPTRACK - MULTI PAGE JAVASCRIPT
 ===================================================== */
 
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+        navigator.serviceWorker.register("./service-worker.js");
+    });
+}
+
 function isValidNonNegativeNumber(value) {
     return Number.isFinite(value) && value >= 0;
 }
