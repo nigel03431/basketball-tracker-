@@ -1,4 +1,4 @@
-const CACHE_NAME = "hooptrack-v2";
+const CACHE_NAME = "hooptrack-v3";
 
 const APP_FILES = [
     "./",
